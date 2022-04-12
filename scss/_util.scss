@@ -1,0 +1,52 @@
+$xsmall: 319;
+$small: 370;
+$phone: 400;
+$mphone: 440;
+$xphone: 600;
+$tablet: 767;
+$mtablet: 800;
+$xtablet: 1024;
+$medium: 1100;
+$xmedium: 1200;
+$large: 1440;
+$xlarge: 1920;
+$qhd: 2560;
+$uhd: 3840;
+$minMediaXSmall: "only screen and (min-width: #{$xsmall}px)";
+$minMediaSmall: "only screen and (min-width: #{$small}px)";
+$minMediaPhone: "only screen and (min-width: #{$phone}px)";
+$minMediaMPhone: "only screen and (min-width: #{$mphone}px)";
+$minMediaXPhone: "only screen and (min-width: #{$xphone}px)";
+$minMediaTablet: "only screen and (min-width: #{$tablet}px)";
+$minMediaMTablet: "only screen and (min-width: #{$mtablet}px)";
+$minMediaXTablet: "only screen and (min-width: #{$xtablet}px)";
+$minMediaMedium: "only screen and (min-width: #{$medium}px)";
+$minMediaXMedium: "only screen and (min-width: #{$xmedium}px)";
+$minMediaLarge: "only screen and (min-width: #{$large}px)";
+$minMediaXLarge: "only screen and (min-width: #{$xlarge}px)";
+$minMedia2k: "only screen and (min-width: #{$qhd}px)";
+$minMedia4k: "only screen and (min-width: #{$uhd}px)";
+
+@mixin FlexFlowRow {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin FlexToolbar {
+	@include FlexFlowRow;
+	@media #{$minMediaXSmall} {
+		flex-wrap: nowrap;
+	}
+}
+
+@mixin FlexToolbarItemSplit {
+	flex-grow: 1;
+	cursor: default;
+	user-select: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
