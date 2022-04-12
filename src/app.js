@@ -17,6 +17,7 @@ const ResultsPage = () => {
 		if(typeof newTerm !== 'undefined' && typeof newTerm === 'string') {
 			setStatus('start');
 			setSearchTerm(newTerm);
+			
 		}
 	}
 	
@@ -28,6 +29,7 @@ const ResultsPage = () => {
 	}
 	
 	useEffect(() => {
+		document.title = `Search for ${searchTerm}`;
 		if(status === 'start') {
 			fetch(apiUrl).then((res) => res.json())
 				.then((result) => {

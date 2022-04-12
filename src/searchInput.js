@@ -20,15 +20,15 @@ const SearchInput = ({updateSearchTerm}) => {
 		<div id='SearchBar'>
 			<form id='SearchTermForm' onSubmit={handleSubmit}>
 				<input name='SearchTerm'
-					id='SearchTerm' 
-					tabindex={1}
+					id='SearchTerm'
+					tabIndex={1}
 					type='text'/>
 				<button id='SearchTermSubmit' 
 					aria-label="Search Button"
 					onClick={getNewSearchTerm}
 					type='submit' 
 					placeholder='Image Search'
-					tabindex={2}
+					tabIndex={2}
 					value='Submit'>Search</button>
 			</form>
 		</div>

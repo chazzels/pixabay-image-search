@@ -9,9 +9,9 @@ const ResultSortFilter = ({ term, count, updateSearchTerm, page, itemsPerPage })
 	return (
 		<section id='ResultSortFilter'>
 			<ResultTitle term={term} count={count}></ResultTitle>
-			<div class='toolbar-split'></div>
+			<div className='toolbar-split'></div>
 			<SearchInput updateSearchTerm={updateSearchTerm}></SearchInput>
-			<div class='toolbar-split'></div>
+			<div className='toolbar-split'></div>
 			<ResultOverview pageNumber={page} itemsPerPage={itemsPerPage} resultCount={count}></ResultOverview>
 		</section>
 	);
